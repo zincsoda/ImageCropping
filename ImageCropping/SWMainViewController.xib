@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SWMainViewController">
+            <connections>
+                <outlet property="aspectRatioLabel" destination="Exr-Ut-1Bm" id="5RP-cF-QKD"/>
+                <outlet property="centerBtn" destination="yAo-ro-KLJ" id="HNK-kM-shQ"/>
+                <outlet property="downArrowBtn" destination="jQt-bz-NHn" id="7Fe-ci-sIa"/>
+                <outlet property="imageDetailLabel" destination="BYi-pX-ZJn" id="GzM-tb-Iv5"/>
+                <outlet property="imageView" destination="N6w-G7-aXa" id="Ohc-kv-OCz"/>
+                <outlet property="leftArrowBtn" destination="8I8-Bb-YRG" id="OgM-Ov-KwX"/>
+                <outlet property="outputImageView" destination="39S-3u-R8b" id="TKg-uH-tE9"/>
+                <outlet property="overlayDetailLabel" destination="3yU-y2-w6r" id="jch-bA-F7e"/>
+                <outlet property="overlayRatioLabel" destination="ouj-PR-rLI" id="q9L-8k-31d"/>
+                <outlet property="rightArrowBtn" destination="fFf-Yk-lI8" id="mdv-aO-IXr"/>
+                <outlet property="upArrowBtn" destination="Fll-B7-JSX" id="5rm-wr-gPZ"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="819"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gED-8X-yW2">
+                    <rect key="frame" x="28" y="771" width="104" height="32"/>
+                    <buttonCell key="cell" type="push" title="Get Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fCx-By-NOi">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="getImagePressed:" target="-2" id="826-to-mAu"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPV-qd-X4S">
+                    <rect key="frame" x="108" y="241" width="171" height="32"/>
+                    <buttonCell key="cell" type="push" title="Crop to" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nfx-UD-VfQ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="cropButtonPressed:" target="-2" id="KbY-gc-tG4"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYi-pX-ZJn">
+                    <rect key="frame" x="32" y="340" width="163" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Image Dimensions" id="06a-TP-pRM">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Exr-Ut-1Bm">
+                    <rect key="frame" x="194" y="340" width="161" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Aspect Ratio" id="O0X-tN-1Pw">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="0OF-J2-pB3">
+                    <rect key="frame" x="31" y="453" width="325" height="325"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="323" height="309"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N6w-G7-aXa">
+                                <rect key="frame" x="15" y="11" width="290" height="290"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" id="sjS-5W-gc0"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lc-S0-WrX">
+                    <rect key="frame" x="40" y="273" width="171" height="32"/>
+                    <buttonCell key="cell" type="push" title="Show Overlay" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fPn-9w-BHP">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="drawOverlay:" target="-2" id="eFB-vM-4JU"/>
+                    </connections>
+                </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39S-3u-R8b">
+                    <rect key="frame" x="43" y="16" width="313" height="185"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="grayBezel" id="gaa-5L-c1N"/>
+                </imageView>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-HO-AcM">
+                    <rect key="frame" x="211" y="273" width="148" height="32"/>
+                    <buttonCell key="cell" type="push" title="Reset Overlay" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="H40-KT-b36">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="resetOverlay:" target="-2" id="CrC-2a-9ad"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yU-y2-w6r">
+                    <rect key="frame" x="32" y="315" width="163" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Overlay Dimensions" id="Ufp-fH-22a">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouj-PR-rLI">
+                    <rect key="frame" x="194" y="315" width="161" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Aspect Ratio" id="Qqw-zQ-YHM">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="354-Yk-oJe">
+                    <rect key="frame" x="46" y="206" width="53" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Preview" id="iDm-5l-YeG">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fll-B7-JSX">
+                    <rect key="frame" x="182" y="421" width="23" height="23"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Up_arrow" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8NG-qL-jGY">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="upArrowPressed:" target="-2" id="Ba6-dD-bVp"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-Yk-lI8">
+                    <rect key="frame" x="206" y="395" width="23" height="23"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Right_arrow" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XBu-pB-s62">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="rightArrowPressed:" target="-2" id="AJe-5X-aya"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQt-bz-NHn">
+                    <rect key="frame" x="182" y="369" width="23" height="23"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Down_Arrow" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="l2C-3J-NUM">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="downArrowPressed:" target="-2" id="hpa-TL-Bml"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAo-ro-KLJ">
+                    <rect key="frame" x="182" y="395" width="23" height="23"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="center-128" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0IN-mq-uoq">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="centerButtonPressed:" target="-2" id="lLY-rS-LbJ"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8I8-Bb-YRG">
+                    <rect key="frame" x="155" y="395" width="23" height="23"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Left_arrow" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mk2-7r-Ne7">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="leftArrowPressed:" target="-2" id="Zhy-1J-uK7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="226" y="435.5"/>
+        </customView>
+        <button verticalHuggingPriority="750" id="eHH-Wo-eMC">
+            <rect key="frame" x="0.0" y="0.0" width="82" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Pyz-C0-vbD">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+        </button>
+    </objects>
+    <resources>
+        <image name="Down_Arrow" width="273" height="325.5"/>
+        <image name="Left_arrow" width="347.20001220703125" height="291.20001220703125"/>
+        <image name="Right_arrow" width="347.20001220703125" height="291.20001220703125"/>
+        <image name="Up_arrow" width="500" height="600"/>
+        <image name="center-128" width="128" height="128"/>
+    </resources>
+</document>
