@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5A467B1B6FC958004C0628 /* SWImageCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A467A1B6FC958004C0628 /* SWImageCrop.m */; };
 		2C83DCB91B0876F6002B8F51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C83DCB81B0876F6002B8F51 /* Cocoa.framework */; };
 		2C83DCC31B0876F6002B8F51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C83DCC11B0876F6002B8F51 /* InfoPlist.strings */; };
 		2C83DCC51B0876F6002B8F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C83DCC41B0876F6002B8F51 /* main.m */; };
@@ -25,6 +26,8 @@
 		2CE293C91B11A39200BCDE9C /* Right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE293C51B11A39200BCDE9C /* Right_arrow.png */; };
 		2CE293CA1B11A39200BCDE9C /* Up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE293C61B11A39200BCDE9C /* Up_arrow.png */; };
 		2CE293CC1B11A3F500BCDE9C /* center-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE293CB1B11A3F500BCDE9C /* center-128.png */; };
+		2CFE0E2B1B709E8900423294 /* SWMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE0E291B709E8900423294 /* SWMainWindowController.m */; };
+		2CFE0E2C1B709E8900423294 /* SWMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE0E2A1B709E8900423294 /* SWMainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C5A46791B6FC958004C0628 /* SWImageCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWImageCrop.h; sourceTree = "<group>"; };
+		2C5A467A1B6FC958004C0628 /* SWImageCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWImageCrop.m; sourceTree = "<group>"; };
 		2C83DCB51B0876F6002B8F51 /* ImageCropping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCropping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C83DCB81B0876F6002B8F51 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2C83DCBB1B0876F6002B8F51 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -65,6 +70,9 @@
 		2CE293C51B11A39200BCDE9C /* Right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Right_arrow.png; sourceTree = "<group>"; };
 		2CE293C61B11A39200BCDE9C /* Up_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Up_arrow.png; sourceTree = "<group>"; };
 		2CE293CB1B11A3F500BCDE9C /* center-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center-128.png"; sourceTree = "<group>"; };
+		2CFE0E281B709E8900423294 /* SWMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWMainWindowController.h; sourceTree = "<group>"; };
+		2CFE0E291B709E8900423294 /* SWMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWMainWindowController.m; sourceTree = "<group>"; };
+		2CFE0E2A1B709E8900423294 /* SWMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWMainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +141,13 @@
 				2C83DCCA1B0876F6002B8F51 /* SWAppDelegate.h */,
 				2C83DCCB1B0876F6002B8F51 /* SWAppDelegate.m */,
 				2C83DCCD1B0876F6002B8F51 /* MainMenu.xib */,
+				2CFE0E281B709E8900423294 /* SWMainWindowController.h */,
+				2CFE0E291B709E8900423294 /* SWMainWindowController.m */,
+				2CFE0E2A1B709E8900423294 /* SWMainWindowController.xib */,
 				2C83DCF21B087CD9002B8F51 /* SWMainViewController.h */,
 				2C83DCF31B087CD9002B8F51 /* SWMainViewController.m */,
+				2C5A46791B6FC958004C0628 /* SWImageCrop.h */,
+				2C5A467A1B6FC958004C0628 /* SWImageCrop.m */,
 				2C83DCF41B087CD9002B8F51 /* SWMainViewController.xib */,
 				2C83DCD01B0876F6002B8F51 /* Images.xcassets */,
 				2CE293C31B11A39200BCDE9C /* Down_Arrow.png */,
@@ -260,6 +273,7 @@
 				2CE293C71B11A39200BCDE9C /* Down_Arrow.png in Resources */,
 				2C83DCD11B0876F6002B8F51 /* Images.xcassets in Resources */,
 				2CE293CA1B11A39200BCDE9C /* Up_arrow.png in Resources */,
+				2CFE0E2C1B709E8900423294 /* SWMainWindowController.xib in Resources */,
 				2CE293CC1B11A3F500BCDE9C /* center-128.png in Resources */,
 				2C83DCC91B0876F6002B8F51 /* Credits.rtf in Resources */,
 				2C83DCCF1B0876F6002B8F51 /* MainMenu.xib in Resources */,
@@ -283,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C83DCF51B087CD9002B8F51 /* SWMainViewController.m in Sources */,
+				2C5A467B1B6FC958004C0628 /* SWImageCrop.m in Sources */,
 				2C83DCCC1B0876F6002B8F51 /* SWAppDelegate.m in Sources */,
+				2CFE0E2B1B709E8900423294 /* SWMainWindowController.m in Sources */,
 				2C83DCC51B0876F6002B8F51 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

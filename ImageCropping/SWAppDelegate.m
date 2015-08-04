@@ -7,11 +7,11 @@
 //
 
 #import "SWAppDelegate.h"
-#import "SWMainViewController.h"
+#import "SWMainWindowController.h"
 
 @interface SWAppDelegate()
 
-@property (nonatomic, strong) IBOutlet SWMainViewController *mainViewController;
+@property SWMainWindowController *mainWindowController;
 
 @end
 
@@ -19,8 +19,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  self.mainViewController = [[SWMainViewController alloc] initWithNibName:@"SWMainViewController" bundle:nil];
-  [self.window.contentView addSubview:self.mainViewController.view];
+  self.mainWindowController = [[SWMainWindowController alloc] initWithWindowNibName:@"SWMainWindowController"];
+  [self.mainWindowController showWindow:self];
 }
 
 @end

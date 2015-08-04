@@ -41,8 +41,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-      self.widthRatio = 16.0f;
-      self.heightRatio = 9.0f;
+      self.widthRatio = 1.0f;
+      self.heightRatio = 1.0f;
       self.aspectRatio = self.widthRatio / self.heightRatio;
       self.xOffset = 0;
       self.yOffset = 0;
@@ -51,9 +51,6 @@
 }
 
 - (void)viewDidLoad {
-  [self getImage];
-  [self drawOverlay];
-  [self cropImage];
 }
 
 #pragma mark - Handle button presses
